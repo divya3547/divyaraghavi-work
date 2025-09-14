@@ -1,4 +1,5 @@
 import { useState } from "react";
+import emailjs from '@emailjs/browser';
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -51,18 +52,38 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for your message. I'll get back to you soon."
-    });
-    setFormData({
-      name: "",
-      email: "",
-      message: ""
-    });
-    setIsSubmitting(false);
+    try {
+      await emailjs.send(
+        'service_5dx2dh8',
+        'template_snkgt2c',
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+          to_name: 'Divya Raghavi',
+        },
+        'TEPsLmr0ZVDBCSdhh'
+      );
+      
+      toast({
+        title: "Message Sent!",
+        description: "Thank you for your message. I'll get back to you soon."
+      });
+      
+      setFormData({
+        name: "",
+        email: "",
+        message: ""
+      });
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
   return <section id="contact" className="py-24 bg-background">
       <div className="container mx-auto px-6">
