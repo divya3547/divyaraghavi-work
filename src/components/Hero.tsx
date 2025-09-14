@@ -9,22 +9,26 @@ const Hero = () => {
       behavior: 'smooth'
     });
   };
-  return <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-subtle">
-      {/* Enhanced Background Pattern with multiple layers */}
+  return <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-background/95 to-muted/40">
+      {/* Dark accent sections */}
+      <div className="absolute top-0 left-0 w-1/3 h-1/2 bg-gradient-to-br from-primary/10 to-transparent" />
+      <div className="absolute bottom-0 right-0 w-1/2 h-1/3 bg-gradient-to-tl from-accent/8 to-transparent" />
+      
+      {/* Enhanced Background Pattern with mixed light/dark elements */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,hsl(var(--primary)/0.05),transparent_70%)]" />
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,hsl(var(--border)/0.3)_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--border)/0.3)_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-20" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_25%_25%,hsl(var(--accent)/0.03),transparent_50%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_75%,hsl(var(--secondary)/0.03),transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,hsl(var(--primary)/0.15),transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,hsl(var(--accent)/0.12),transparent_60%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(135deg,hsl(var(--card)),hsl(var(--muted)/0.5))] opacity-40" />
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,hsl(var(--border)/0.4)_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--border)/0.4)_1px,transparent_1px)] bg-[size:3rem_3rem] opacity-30" />
       </div>
       
-      {/* Dynamic Floating Elements with animations */}
+      {/* Dynamic Floating Elements with mixed light/dark tones */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 right-1/5 w-80 h-80 bg-primary/10 rounded-full blur-3xl animate-float" />
-        <div className="absolute bottom-1/4 left-1/5 w-60 h-60 bg-accent/12 rounded-full blur-3xl animate-float" style={{animationDelay: '2s'}} />
-        <div className="absolute top-2/3 right-2/3 w-40 h-40 bg-secondary/15 rounded-full blur-2xl animate-float" style={{animationDelay: '4s'}} />
-        <div className="absolute top-1/2 left-3/4 w-32 h-32 bg-primary/8 rounded-full blur-xl animate-float" style={{animationDelay: '1s'}} />
-        <div className="absolute bottom-1/3 right-1/4 w-24 h-24 bg-accent/10 rounded-full blur-lg animate-float" style={{animationDelay: '3s'}} />
+        <div className="absolute top-1/4 right-1/5 w-96 h-96 bg-gradient-to-br from-primary/15 to-primary/5 rounded-full blur-3xl animate-float" />
+        <div className="absolute bottom-1/4 left-1/5 w-72 h-72 bg-gradient-to-br from-card to-accent/8 rounded-full blur-3xl animate-float" style={{animationDelay: '2s'}} />
+        <div className="absolute top-2/3 right-2/3 w-48 h-48 bg-gradient-to-br from-muted to-secondary/10 rounded-full blur-2xl animate-float" style={{animationDelay: '4s'}} />
+        <div className="absolute top-1/2 left-3/4 w-40 h-40 bg-gradient-to-br from-accent/12 to-transparent rounded-full blur-xl animate-float" style={{animationDelay: '1s'}} />
+        <div className="absolute bottom-1/3 right-1/4 w-32 h-32 bg-gradient-to-br from-primary/8 to-card rounded-full blur-lg animate-float" style={{animationDelay: '3s'}} />
       </div>
 
       <div className="relative z-10 container mx-auto px-6 text-center">
@@ -32,26 +36,32 @@ const Hero = () => {
           {/* Enhanced Profile Image with glassmorphism */}
           <div className="mb-20 flex justify-center animate-slide-up">
             <div className="relative group">
-              <div className="w-52 h-52 rounded-full overflow-hidden ring-4 ring-primary/30 shadow-primary bg-gradient-to-br from-primary/10 to-accent/10 backdrop-blur-sm animate-glow">
+              {/* Dark background ring */}
+              <div className="absolute inset-0 w-56 h-56 rounded-full bg-gradient-to-br from-muted/80 to-card border-2 border-primary/20 -translate-x-2 -translate-y-2" />
+              
+              <div className="relative w-52 h-52 rounded-full overflow-hidden ring-4 ring-primary/40 shadow-primary bg-gradient-to-br from-card to-primary/5 backdrop-blur-sm animate-glow">
                 <img src={profileImage} alt="Divya Raghavi Medisetti - Java Full Stack Developer" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/30 via-transparent to-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
-              <div className="absolute -bottom-4 -right-4 w-12 h-12 bg-gradient-to-br from-accent to-accent/80 rounded-full flex items-center justify-center shadow-accent animate-pulse">
-                <div className="w-4 h-4 bg-accent-foreground rounded-full animate-ping" />
+              
+              {/* Bright accent badge */}
+              <div className="absolute -bottom-4 -right-4 w-14 h-14 bg-gradient-to-br from-accent via-accent/90 to-primary rounded-full flex items-center justify-center shadow-accent border-4 border-background animate-pulse">
+                <div className="w-5 h-5 bg-accent-foreground rounded-full animate-ping" />
               </div>
-              {/* Decorative rings */}
-              <div className="absolute inset-0 rounded-full border border-primary/10 scale-110 animate-pulse" />
-              <div className="absolute inset-0 rounded-full border border-accent/10 scale-125 animate-pulse" style={{animationDelay: '1s'}} />
+              
+              {/* Mixed decorative rings */}
+              <div className="absolute inset-0 rounded-full border-2 border-primary/20 scale-110 animate-pulse" />
+              <div className="absolute inset-0 rounded-full border border-muted/60 scale-125 animate-pulse" style={{animationDelay: '1s'}} />
             </div>
           </div>
 
           {/* Hero Content */}
           <div className="space-y-6">
             {/* Enhanced Status Badge with glassmorphism */}
-            <div className="inline-flex items-center px-8 py-4 bg-card/80 backdrop-blur-md rounded-full border border-primary/30 shadow-primary animate-slide-up group hover:shadow-accent transition-all duration-300">
-              <div className="w-3 h-3 bg-gradient-to-r from-accent to-accent/80 rounded-full mr-4 animate-pulse shadow-accent" />
-              <span className="text-sm font-semibold text-foreground/90 tracking-wide">Available for new opportunities</span>
-              <div className="ml-2 w-2 h-2 bg-accent/50 rounded-full animate-ping" />
+            <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-card/90 to-muted/60 backdrop-blur-md rounded-full border-2 border-primary/40 shadow-primary animate-slide-up group hover:shadow-accent transition-all duration-300">
+              <div className="w-4 h-4 bg-gradient-to-r from-accent via-accent/90 to-primary rounded-full mr-4 animate-pulse shadow-accent border border-background" />
+              <span className="text-sm font-bold text-foreground tracking-wide">Available for new opportunities</span>
+              <div className="ml-3 w-3 h-3 bg-gradient-to-r from-primary to-accent rounded-full animate-ping" />
             </div>
 
             {/* Enhanced Name with gradient text */}
@@ -98,20 +108,25 @@ const Hero = () => {
 
             {/* Enhanced Stats Cards with glassmorphism */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-24 animate-slide-up" style={{animationDelay: '1s'}}>
-              <div className="relative group bg-card/80 backdrop-blur-md rounded-3xl p-10 border border-primary/30 shadow-primary hover:shadow-xl transition-all duration-500 hover:scale-110 overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="relative text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary/80 mb-4">5+</div>
-                <div className="relative text-muted-foreground font-semibold tracking-wide">Years Experience</div>
+              {/* Light card with dark accents */}
+              <div className="relative group bg-gradient-to-br from-card to-background border-2 border-primary/40 rounded-3xl p-10 shadow-primary hover:shadow-xl transition-all duration-500 hover:scale-110 overflow-hidden">
+                <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-bl from-primary/20 to-transparent rounded-bl-3xl" />
+                <div className="relative text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary via-primary/80 to-accent mb-4">5+</div>
+                <div className="relative text-foreground/80 font-semibold tracking-wide">Years Experience</div>
               </div>
-              <div className="relative group bg-card/80 backdrop-blur-md rounded-3xl p-10 border border-accent/30 shadow-accent hover:shadow-xl transition-all duration-500 hover:scale-110 overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="relative text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-accent to-accent/80 mb-4">3</div>
-                <div className="relative text-muted-foreground font-semibold tracking-wide">Industry Domains</div>
+              
+              {/* Dark card with bright accents */}
+              <div className="relative group bg-gradient-to-br from-muted/60 to-card/80 border-2 border-accent/50 rounded-3xl p-10 shadow-accent hover:shadow-xl transition-all duration-500 hover:scale-110 overflow-hidden">
+                <div className="absolute bottom-0 left-0 w-20 h-20 bg-gradient-to-tr from-accent/15 to-transparent rounded-tr-3xl" />
+                <div className="relative text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-accent via-accent/90 to-primary mb-4">3</div>
+                <div className="relative text-foreground font-semibold tracking-wide">Industry Domains</div>
               </div>
-              <div className="relative group bg-card/80 backdrop-blur-md rounded-3xl p-10 border border-secondary/40 shadow-soft hover:shadow-primary transition-all duration-500 hover:scale-110 overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-secondary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="relative text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary mb-4">15+</div>
-                <div className="relative text-muted-foreground font-semibold tracking-wide">Technologies</div>
+              
+              {/* Mixed light/dark card */}
+              <div className="relative group bg-gradient-to-br from-background via-card to-muted/40 border-2 border-primary/30 rounded-3xl p-10 shadow-soft hover:shadow-primary transition-all duration-500 hover:scale-110 overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="relative text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary via-accent to-primary mb-4">15+</div>
+                <div className="relative text-foreground/90 font-semibold tracking-wide">Technologies</div>
               </div>
             </div>
           </div>
