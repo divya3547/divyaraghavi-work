@@ -9,25 +9,30 @@ const Hero = () => {
       behavior: 'smooth'
     });
   };
-  return <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Subtle Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-background to-background/98">
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,hsl(var(--border))_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--border))_1px,transparent_1px)] bg-[size:6rem_6rem] opacity-5" />
+  return <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-subtle">
+      {/* Modern Background Pattern */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,hsl(var(--primary)/0.03),transparent_70%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,hsl(var(--border)/0.3)_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--border)/0.3)_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-20" />
       </div>
       
-      {/* Minimal Accent Elements */}
+      {/* Soft Accent Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/3 right-1/4 w-64 h-64 bg-primary/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-1/3 left-1/4 w-48 h-48 bg-accent/5 rounded-full blur-2xl" />
+        <div className="absolute top-1/4 right-1/5 w-80 h-80 bg-primary/8 rounded-full blur-3xl" />
+        <div className="absolute bottom-1/4 left-1/5 w-60 h-60 bg-accent/10 rounded-full blur-3xl" />
+        <div className="absolute top-2/3 right-2/3 w-40 h-40 bg-secondary/15 rounded-full blur-2xl" />
       </div>
 
       <div className="relative z-10 container mx-auto px-6 text-center">
         <div className="max-w-5xl mx-auto">
           {/* Profile Image */}
-          <div className="mb-12 flex justify-center animate-fade-in">
+          <div className="mb-16 flex justify-center animate-fade-in">
             <div className="relative">
-              <div className="w-40 h-40 rounded-full overflow-hidden border-2 border-foreground/10 shadow-lg">
+              <div className="w-44 h-44 rounded-full overflow-hidden ring-4 ring-primary/20 shadow-soft">
                 <img src={profileImage} alt="Divya Raghavi Medisetti - Java Full Stack Developer" className="w-full h-full object-cover" />
+              </div>
+              <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-accent rounded-full flex items-center justify-center shadow-soft">
+                <div className="w-3 h-3 bg-accent-foreground rounded-full" />
               </div>
             </div>
           </div>
@@ -35,57 +40,60 @@ const Hero = () => {
           {/* Hero Content */}
           <div className="space-y-6">
             {/* Status Badge */}
-            <div className="inline-flex items-center px-4 py-2 bg-foreground/5 rounded-full border border-foreground/10 animate-fade-in">
-              <div className="w-2 h-2 bg-primary rounded-full mr-2" />
-              <span className="text-sm font-medium text-foreground/80">Available for new opportunities</span>
+            <div className="inline-flex items-center px-6 py-3 bg-card/70 backdrop-blur-sm rounded-full border border-primary/20 shadow-soft animate-fade-in">
+              <div className="w-2.5 h-2.5 bg-accent rounded-full mr-3 animate-pulse" />
+              <span className="text-sm font-medium text-foreground/90">Available for new opportunities</span>
             </div>
 
             {/* Name */}
-            <h1 className="text-5xl md:text-7xl xl:text-8xl font-bold mb-6 animate-fade-in delay-200">
-              <span className="text-foreground text-5xl">Divya Raghavi</span>
-              <br />
-              <span className="text-foreground/90 text-4xl xl:text-7xl md:text-5xl">Medisetti</span>
+            <h1 className="text-4xl md:text-5xl xl:text-6xl font-bold mb-8 animate-fade-in delay-200 leading-tight">
+              <span className="text-foreground block mb-2">Divya Raghavi</span>
+              <span className="text-foreground/80 text-3xl xl:text-5xl md:text-4xl block">Medisetti</span>
             </h1>
             
             {/* Title with Modern Styling */}
-            <div className="relative mb-8 animate-fade-in delay-300">
-              <h2 className="text-2xl font-semibold text-foreground/90 mb-4 md:text-2xl">Java Full Stack Developer</h2>
-              <div className="w-24 h-1 bg-gradient-primary mx-auto rounded-full" />
+            <div className="relative mb-10 animate-fade-in delay-300">
+              <h2 className="text-xl font-semibold text-primary mb-4 tracking-wide">Java Full Stack Developer</h2>
+              <div className="flex items-center justify-center gap-2">
+                <div className="w-8 h-0.5 bg-gradient-primary rounded-full" />
+                <div className="w-3 h-3 bg-primary/30 rounded-full" />
+                <div className="w-8 h-0.5 bg-gradient-primary rounded-full" />
+              </div>
             </div>
             
             {/* Enhanced Tagline */}
-            <p className="text-lg md:text-xl max-w-4xl mx-auto mb-12 leading-relaxed animate-fade-in delay-500 text-black">
-              Crafting <span className="font-semibold text-stone-600">scalable</span>, 
+            <p className="text-lg md:text-xl max-w-3xl mx-auto mb-14 leading-relaxed animate-fade-in delay-500 text-foreground/80">
+              Crafting <span className="font-semibold text-primary">scalable</span>, 
               <span className="text-accent font-semibold"> secure</span>, and 
-              <span className="text-primary font-semibold"> compliant</span> software solutions 
+              <span className="text-muted-foreground font-semibold"> compliant</span> software solutions 
               for enterprises across banking, healthcare, and insurance domains
             </p>
             
             {/* Modern CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-6 justify-center animate-fade-in delay-700">
-              <Button size="lg" className="group bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-10 py-6 text-lg rounded-2xl shadow-primary transition-all duration-300 hover:shadow-2xl hover:scale-105" onClick={() => scrollToSection('portfolio')}>
+            <div className="flex flex-col sm:flex-row gap-5 justify-center animate-fade-in delay-700">
+              <Button size="lg" className="group bg-primary hover:bg-primary/90 text-primary-foreground font-medium px-8 py-4 text-base rounded-2xl shadow-primary transition-all duration-300 hover:shadow-xl hover:scale-105" onClick={() => scrollToSection('portfolio')}>
                 View Portfolio 
-                <ArrowRight className="ml-3 w-5 h-5 transition-transform group-hover:translate-x-1" />
+                <ArrowRight className="ml-3 w-4 h-4 transition-transform group-hover:translate-x-1" />
               </Button>
-              <Button size="lg" variant="outline" className="group border-2 border-foreground/20 bg-background/50 backdrop-blur-sm text-foreground hover:bg-foreground/10 font-semibold px-10 py-6 text-lg rounded-2xl transition-all duration-300 hover:scale-105" onClick={() => scrollToSection('contact')}>
+              <Button size="lg" variant="outline" className="group border-2 border-primary/30 bg-card/60 backdrop-blur-sm text-foreground hover:bg-primary/5 hover:border-primary/50 font-medium px-8 py-4 text-base rounded-2xl transition-all duration-300 hover:scale-105 shadow-soft" onClick={() => scrollToSection('contact')}>
                 Get In Touch 
-                <Sparkles className="ml-3 w-5 h-5 transition-transform group-hover:rotate-12" />
+                <Sparkles className="ml-3 w-4 h-4 transition-transform group-hover:rotate-12" />
               </Button>
             </div>
 
             {/* Stats Cards */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16 animate-fade-in delay-1000">
-              <div className="bg-background/20 backdrop-blur-sm rounded-2xl p-6 border border-foreground/10">
-                <div className="text-3xl font-bold text-primary mb-2">5+</div>
-                <div className="text-foreground/70">Years Experience</div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-20 animate-fade-in delay-1000">
+              <div className="bg-card/70 backdrop-blur-sm rounded-3xl p-8 border border-primary/20 shadow-soft hover:shadow-primary transition-all duration-300 hover:scale-105">
+                <div className="text-4xl font-bold text-primary mb-3">5+</div>
+                <div className="text-muted-foreground font-medium">Years Experience</div>
               </div>
-              <div className="bg-background/20 backdrop-blur-sm rounded-2xl p-6 border border-foreground/10">
-                <div className="text-3xl font-bold text-accent mb-2">3</div>
-                <div className="text-foreground/70">Industry Domains</div>
+              <div className="bg-card/70 backdrop-blur-sm rounded-3xl p-8 border border-accent/20 shadow-soft hover:shadow-accent transition-all duration-300 hover:scale-105">
+                <div className="text-4xl font-bold text-accent mb-3">3</div>
+                <div className="text-muted-foreground font-medium">Industry Domains</div>
               </div>
-              <div className="bg-background/20 backdrop-blur-sm rounded-2xl p-6 border border-foreground/10">
-                <div className="text-3xl font-bold text-primary mb-2">15+</div>
-                <div className="text-foreground/70">Technologies</div>
+              <div className="bg-card/70 backdrop-blur-sm rounded-3xl p-8 border border-secondary/30 shadow-soft hover:shadow-soft transition-all duration-300 hover:scale-105">
+                <div className="text-4xl font-bold text-primary mb-3">15+</div>
+                <div className="text-muted-foreground font-medium">Technologies</div>
               </div>
             </div>
           </div>

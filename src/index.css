@@ -8,42 +8,44 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 228 84% 4.9%;
+    --background: 221 39% 98%;
+    --foreground: 225 15% 20%;
 
     --card: 0 0% 100%;
-    --card-foreground: 228 84% 4.9%;
+    --card-foreground: 225 15% 20%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 228 84% 4.9%;
+    --popover-foreground: 225 15% 20%;
 
-    --primary: 262 83% 58%;
-    --primary-foreground: 0 0% 98%;
+    --primary: 217 91% 75%;
+    --primary-foreground: 225 15% 20%;
 
-    --secondary: 240 4.8% 95.9%;
-    --secondary-foreground: 240 5.9% 10%;
+    --secondary: 210 40% 92%;
+    --secondary-foreground: 225 15% 20%;
 
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 46.1%;
+    --muted: 210 40% 94%;
+    --muted-foreground: 225 15% 60%;
 
-    --accent: 39 100% 57%;
-    --accent-foreground: 0 0% 98%;
+    --accent: 142 76% 85%;
+    --accent-foreground: 225 15% 20%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
-    --ring: 262 83% 58%;
+    --border: 220 14% 91%;
+    --input: 220 14% 91%;
+    --ring: 217 91% 75%;
 
-    --radius: 0.75rem;
+    --radius: 1rem;
     
-    /* Custom portfolio colors */
-    --gradient-primary: linear-gradient(135deg, 262 83% 58%, 280 100% 70%);
-    --gradient-accent: linear-gradient(135deg, 39 100% 57%, 45 100% 65%);
-    --gradient-hero: linear-gradient(135deg, 262 83% 58%, 39 100% 57%);
-    --shadow-primary: 0 10px 30px -5px hsl(262 83% 58% / 0.3);
-    --shadow-accent: 0 8px 25px -5px hsl(39 100% 57% / 0.3);
+    /* Modern pastel gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(217 91% 80%), hsl(213 85% 85%));
+    --gradient-accent: linear-gradient(135deg, hsl(142 76% 85%), hsl(145 70% 90%));
+    --gradient-hero: linear-gradient(135deg, hsl(221 39% 98%), hsl(217 91% 95%));
+    --gradient-subtle: linear-gradient(180deg, hsl(221 39% 98%), hsl(210 40% 94%));
+    --shadow-primary: 0 4px 20px -4px hsl(217 91% 75% / 0.15);
+    --shadow-accent: 0 4px 20px -4px hsl(142 76% 85% / 0.15);
+    --shadow-soft: 0 2px 15px -3px hsl(225 15% 60% / 0.08);
 
     --sidebar-background: 0 0% 98%;
 
