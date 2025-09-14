@@ -81,7 +81,7 @@ const Skills = () => {
           {/* Expertise Highlight */}
           <div className="mt-16 text-center">
             <Card className="bg-gradient-hero text-white border-none shadow-primary">
-              <CardContent className="p-8 bg-white">
+              <CardContent className="p-8">
                 <h3 className="text-2xl font-bold mb-4">Core Expertise</h3>
                 <p className="text-lg text-white/90 max-w-3xl mx-auto leading-relaxed">
                   Specialized in building enterprise-grade applications with strong focus on security, compliance, 
