@@ -41,23 +41,21 @@ const Hero = () => {
             </div>
 
             {/* Name */}
-            <h1 className="text-4xl md:text-5xl xl:text-6xl font-bold mb-6 animate-fade-in delay-200">
-              <span className="text-foreground">Divya Raghavi</span>
+            <h1 className="text-5xl md:text-7xl xl:text-8xl font-bold mb-6 animate-fade-in delay-200">
+              <span className="text-foreground text-5xl">Divya Raghavi</span>
               <br />
-              <span className="text-foreground/90 text-4xl md:text-6xl xl:text-7xl">Medisetti</span>
+              <span className="text-foreground/90 text-4xl xl:text-7xl md:text-5xl">Medisetti</span>
             </h1>
             
             {/* Title with Modern Styling */}
             <div className="relative mb-8 animate-fade-in delay-300">
-              <h2 className="text-2xl md:text-3xl font-semibold text-foreground/90 mb-4">
-                Java Full Stack Developer & Software Engineer
-              </h2>
+              <h2 className="text-2xl font-semibold text-foreground/90 mb-4 md:text-2xl">Java Full Stack Developer</h2>
               <div className="w-24 h-1 bg-gradient-primary mx-auto rounded-full" />
             </div>
             
             {/* Enhanced Tagline */}
-            <p className="text-lg md:text-xl max-w-4xl mx-auto mb-12 text-foreground/80 leading-relaxed animate-fade-in delay-500">
-              Crafting <span className="text-primary font-semibold">scalable</span>, 
+            <p className="text-lg md:text-xl max-w-4xl mx-auto mb-12 leading-relaxed animate-fade-in delay-500 text-black">
+              Crafting <span className="font-semibold text-stone-600">scalable</span>, 
               <span className="text-accent font-semibold"> secure</span>, and 
               <span className="text-primary font-semibold"> compliant</span> software solutions 
               for enterprises across banking, healthcare, and insurance domains
