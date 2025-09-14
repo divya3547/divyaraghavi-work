@@ -32,9 +32,7 @@ const Services = () => {
               My <span className="text-primary">Services</span>
             </h2>
             <div className="w-24 h-1 bg-gradient-primary mx-auto rounded-full text-black"></div>
-            <p className="text-muted-foreground mt-6 text-lg max-w-2xl mx-auto">
-              Delivering comprehensive software solutions from concept to deployment with enterprise-grade quality
-            </p>
+            
           </div>
 
           {/* Services Grid */}
