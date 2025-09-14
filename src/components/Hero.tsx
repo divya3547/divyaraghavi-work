@@ -2,15 +2,14 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Download, Sparkles, Code, Zap } from "lucide-react";
 import profileImage from "@/assets/profile-placeholder.jpg";
 import heroBackground from "@/assets/hero-background.jpg";
-
 const Hero = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
-    element?.scrollIntoView({ behavior: 'smooth' });
+    element?.scrollIntoView({
+      behavior: 'smooth'
+    });
   };
-
-  return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+  return <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Subtle Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-background to-background/98">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,hsl(var(--border))_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--border))_1px,transparent_1px)] bg-[size:6rem_6rem] opacity-5" />
@@ -28,11 +27,7 @@ const Hero = () => {
           <div className="mb-12 flex justify-center animate-fade-in">
             <div className="relative">
               <div className="w-40 h-40 rounded-full overflow-hidden border-2 border-foreground/10 shadow-lg">
-                <img 
-                  src={profileImage} 
-                  alt="Divya Raghavi Medisetti - Java Full Stack Developer" 
-                  className="w-full h-full object-cover"
-                />
+                <img src={profileImage} alt="Divya Raghavi Medisetti - Java Full Stack Developer" className="w-full h-full object-cover" />
               </div>
             </div>
           </div>
@@ -47,9 +42,7 @@ const Hero = () => {
 
             {/* Name */}
             <h1 className="text-5xl md:text-7xl xl:text-8xl font-bold mb-6 animate-fade-in delay-200">
-              <span className="text-foreground">
-                Divya Raghavi
-              </span>
+              <span className="text-foreground">Divya Raghavi</span>
               <br />
               <span className="text-foreground/90">Medisetti</span>
             </h1>
@@ -72,20 +65,11 @@ const Hero = () => {
             
             {/* Modern CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-6 justify-center animate-fade-in delay-700">
-              <Button 
-                size="lg" 
-                className="group bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-10 py-6 text-lg rounded-2xl shadow-primary transition-all duration-300 hover:shadow-2xl hover:scale-105"
-                onClick={() => scrollToSection('portfolio')}
-              >
+              <Button size="lg" className="group bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-10 py-6 text-lg rounded-2xl shadow-primary transition-all duration-300 hover:shadow-2xl hover:scale-105" onClick={() => scrollToSection('portfolio')}>
                 View Portfolio 
                 <ArrowRight className="ml-3 w-5 h-5 transition-transform group-hover:translate-x-1" />
               </Button>
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="group border-2 border-foreground/20 bg-background/50 backdrop-blur-sm text-foreground hover:bg-foreground/10 font-semibold px-10 py-6 text-lg rounded-2xl transition-all duration-300 hover:scale-105"
-                onClick={() => scrollToSection('contact')}
-              >
+              <Button size="lg" variant="outline" className="group border-2 border-foreground/20 bg-background/50 backdrop-blur-sm text-foreground hover:bg-foreground/10 font-semibold px-10 py-6 text-lg rounded-2xl transition-all duration-300 hover:scale-105" onClick={() => scrollToSection('contact')}>
                 Get In Touch 
                 <Sparkles className="ml-3 w-5 h-5 transition-transform group-hover:rotate-12" />
               </Button>
@@ -116,8 +100,6 @@ const Hero = () => {
           <div className="w-1 h-3 bg-foreground/40 rounded-full mt-2" />
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
