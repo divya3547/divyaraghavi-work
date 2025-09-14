@@ -26,7 +26,8 @@ const Hero = () => {
                 <img 
                   src={profileImage} 
                   alt="Divya Raghavi Medisetti - Java Full Stack Developer" 
-                  className="w-full h-full object-cover" 
+                  className="w-full h-full object-cover"
+                  key="profile-image"
                 />
               </div>
               
