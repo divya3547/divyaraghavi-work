@@ -11,63 +11,47 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Animated Background Grid */}
-      <div className="absolute inset-0 bg-gradient-to-br from-background via-background/95 to-primary/5">
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,hsl(var(--border))_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--border))_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-20" />
+      {/* Subtle Background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-background to-background/98">
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,hsl(var(--border))_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--border))_1px,transparent_1px)] bg-[size:6rem_6rem] opacity-5" />
       </div>
       
-      {/* Dynamic Floating Elements */}
+      {/* Minimal Accent Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-primary opacity-10 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-accent opacity-15 rounded-full blur-3xl animate-pulse delay-1000" />
-        <div className="absolute top-1/3 right-1/3 w-64 h-64 bg-accent/10 rounded-full blur-2xl animate-pulse delay-500" />
-        
-        {/* Floating Code Elements */}
-        <div className="absolute top-20 left-20 opacity-30 animate-bounce delay-300">
-          <Code className="w-8 h-8 text-primary" />
-        </div>
-        <div className="absolute top-40 right-32 opacity-30 animate-bounce delay-700">
-          <Zap className="w-6 h-6 text-accent" />
-        </div>
-        <div className="absolute bottom-32 left-32 opacity-30 animate-bounce delay-500">
-          <Sparkles className="w-7 h-7 text-primary" />
-        </div>
+        <div className="absolute top-1/3 right-1/4 w-64 h-64 bg-primary/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-1/3 left-1/4 w-48 h-48 bg-accent/5 rounded-full blur-2xl" />
       </div>
 
       <div className="relative z-10 container mx-auto px-6 text-center">
         <div className="max-w-5xl mx-auto">
-          {/* Profile Image with Modern Frame */}
+          {/* Profile Image */}
           <div className="mb-12 flex justify-center animate-fade-in">
-            <div className="relative group">
-              <div className="absolute -inset-4 bg-gradient-primary rounded-full blur-2xl opacity-30 group-hover:opacity-50 transition-opacity duration-500" />
-              <div className="relative w-40 h-40 rounded-full overflow-hidden border-4 border-background/20 backdrop-blur-sm shadow-2xl">
+            <div className="relative">
+              <div className="w-40 h-40 rounded-full overflow-hidden border-2 border-foreground/10 shadow-lg">
                 <img 
                   src={profileImage} 
                   alt="Divya Raghavi Medisetti - Java Full Stack Developer" 
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-full object-cover"
                 />
-              </div>
-              <div className="absolute -top-2 -right-2 w-8 h-8 bg-accent rounded-full flex items-center justify-center animate-pulse">
-                <Sparkles className="w-4 h-4 text-white" />
               </div>
             </div>
           </div>
 
           {/* Hero Content */}
           <div className="space-y-6">
-            {/* Modern Badge */}
-            <div className="inline-flex items-center px-4 py-2 bg-foreground/10 backdrop-blur-sm rounded-full border border-foreground/20 animate-fade-in">
-              <div className="w-2 h-2 bg-accent rounded-full animate-pulse mr-2" />
-              <span className="text-sm font-medium text-foreground">Available for new opportunities</span>
+            {/* Status Badge */}
+            <div className="inline-flex items-center px-4 py-2 bg-foreground/5 rounded-full border border-foreground/10 animate-fade-in">
+              <div className="w-2 h-2 bg-primary rounded-full mr-2" />
+              <span className="text-sm font-medium text-foreground/80">Available for new opportunities</span>
             </div>
 
-            {/* Name with Gradient */}
+            {/* Name */}
             <h1 className="text-5xl md:text-7xl xl:text-8xl font-bold mb-6 animate-fade-in delay-200">
-              <span className="bg-gradient-to-r from-foreground via-primary to-accent bg-clip-text text-transparent">
+              <span className="text-foreground">
                 Divya Raghavi
               </span>
               <br />
-              <span className="text-foreground">Medisetti</span>
+              <span className="text-foreground/90">Medisetti</span>
             </h1>
             
             {/* Title with Modern Styling */}
@@ -127,9 +111,9 @@ const Hero = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-white/60 rounded-full mt-2 animate-pulse" />
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+        <div className="w-6 h-10 border-2 border-foreground/20 rounded-full flex justify-center">
+          <div className="w-1 h-3 bg-foreground/40 rounded-full mt-2" />
         </div>
       </div>
     </section>
