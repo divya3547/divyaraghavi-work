@@ -66,7 +66,7 @@ const Skills = () => {
                       <IconComponent className={`w-8 h-8 ${category.color === 'primary' ? 'text-primary' : 'text-accent'}`} />
                     </div>
                     
-                    <h3 className="text-lg font-semibold mb-4 text-black">{category.title}</h3>
+                    <h3 className="text-lg font-semibold mb-4 text-slate-500">{category.title}</h3>
                     
                     <div className="flex flex-wrap gap-2 justify-center">
                       {category.skills.map((skill, skillIndex) => <span key={skillIndex} className={`px-3 py-1 text-sm rounded-full ${category.color === 'primary' ? 'bg-primary/10 text-primary' : 'bg-accent/10 text-accent'} hover:scale-105 transition-transform duration-200`}>
