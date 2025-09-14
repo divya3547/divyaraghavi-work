@@ -41,7 +41,7 @@ const Hero = () => {
             </div>
 
             {/* Name */}
-            <h1 className="text-5xl md:text-7xl xl:text-8xl font-bold mb-6 animate-fade-in delay-200">
+            <h1 className="text-4xl md:text-5xl xl:text-6xl font-bold mb-6 animate-fade-in delay-200">
               <span className="text-foreground">Divya Raghavi</span>
               <br />
               <span className="text-foreground/90 text-4xl md:text-6xl xl:text-7xl">Medisetti</span>
